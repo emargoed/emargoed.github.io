@@ -3,16 +3,16 @@
 function loadFunction() {
 var url_string = window.location.href; //window.location.href
 var url = new URL(url_string);
-var c = url.searchParams.get("page");
+var c = url.searchParams.get("p");
 if(c == null){
         return;
 }
-var n = url.searchParams.get("tag");
+var n = url.searchParams.get("t");
 if(n == null){
         return;
 }
 var replacedc = c.split('%20').join('+');
-var replacedn = c.split('%20').join('+');        
+var replacedn = n.split('%20').join('+');        
 document.getElementById('search').value=replacedurl
 console.log(c);
 
