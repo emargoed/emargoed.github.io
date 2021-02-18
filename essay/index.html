@@ -1,0 +1,16 @@
+<script>
+function loadFunction() {
+var url_string = window.location.href; //window.location.href
+var url = new URL(url_string);
+var c = url.searchParams.get("page");
+if(c == null){
+        return;
+}
+var n = url.searchParams.get("tag");
+if(n == null){
+        return;
+}
+var replacedurl = c.split('%20').join('+');
+document.getElementById('search').value=replacedurl
+console.log(c);
+</script>
