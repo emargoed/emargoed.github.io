@@ -10,8 +10,16 @@ var n = url.searchParams.get("tag");
 if(n == null){
         return;
 }
-var replacedurl = c.split('%20').join('+');
+var replacedc = c.split('%20').join('+');
+var replacedn = c.split('%20').join('+');        
 document.getElementById('search').value=replacedurl
 console.log(c);
 document.write(c + n)
+if (replacedc !== null) {
+return process();
+}
+if (replacedn !== null) {
+return process();
+}
+}
 </script>
