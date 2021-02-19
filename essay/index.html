@@ -1,28 +1,14 @@
-<head onload="loadFunction()">
 <script>
-var urlString = window.location.href;
-var url = new URL(urlString);
-var p = url.searchParams.get("p");
-if(p == null){
-        return;
-}
-var t = url.searchParams.get("t");
-if(t == null){
-        return;
-}
-var replacedp = p.split('%20').join('+');
-var replacedt = t.split('%20').join('+');        
+const queryString = window.location.search;
 
-if (replacedp !== null) {
-return process();
-}
-        
-if (replacedt !== null) {
-return process();
-}
-        
+const urlParams = new URLSearchParams(queryString);
+
+const page_type = urlParams.get('page_type')
+const page_tags = urlParams.get('tag')
+const page_subject = urlParams.get('subject')
+
+console.log(page_type);
+console.log(page_tags);
+console.log(page_subject);
 </script>
-        <script>
-                document.write(replacedp)
-        </script>
-</head>
+
