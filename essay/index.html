@@ -42,15 +42,17 @@ Think this is a mistake? <a href="#">Try Again</a>
 </div>
 <div class="login-box-login">
 <h1>Oh no!</h1>
-<p style="color:#a0a4e3;">
-Sorry this page is only available to users. Please login<div class="login-box-signup"><a href="https://atmo.ml">Login Here</a></div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-              n =  new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-          </script>
+<p style="color:#a0a4e3; font-size: 18px">
+Sorry this page is only available to users. Please login or Signup<div class="login-box-signup">
+  
+  <form action="https://atmo.ml" method="post" id="stylized">
+            <div>
+              <input type="submit" name="Login" value="Sign up to Atmo" class="btn">
+            </div>
+        </form>
+  
+  </div>
+
 <form action="login.php" method="post" id="stylized">
 <div>
 </div>
@@ -64,7 +66,7 @@ document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
 <div class="quote-small" style="font-size: 16px">
   <b>You are about to view:<br><span id="ipagetype"></span>.pdf<b>
 </div>
-<img src="https://atmo.ml/Essay-Recovered.png" height="150vh"style="margin-left:0">
+<img src="https://atmo.ml/Essay-Recovered.png" height="150vh"style="z-index: 100; position: absolute; margin-top: -505; margin-left: 320;">
 </div>
 </div>
 </div>
