@@ -3,12 +3,17 @@ const queryString = window.location.search;
 
 const urlParams = new URLSearchParams(queryString);
 
-const page_type = urlParams.get('page_type')
+const page_type = urlParams.get('page')
 const page_tags = urlParams.get('tag')
 const page_subject = urlParams.get('subject')
 
 console.log(page_type);
 console.log(page_tags);
 console.log(page_subject);
+
+var pagetype = page_type.split('+').join(' ');
+var pagetags = page_tags.split('+').join(' ');
+var pagesubject = page_subject.split('+').join(', ');  
 </script>
+
 
