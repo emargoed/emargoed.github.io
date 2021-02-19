@@ -6,22 +6,28 @@ const urlParams = new URLSearchParams(queryString);
 const page_type = urlParams.get('page')
 const page_tags = urlParams.get('tag')
 const page_subject = urlParams.get('subject')
+const page_subject = urlParams.get('title')
 
 console.log(page_type);
 console.log(page_tags);
 console.log(page_subject);
+console.log(page_title);
+  
   
 var pagetype = "Error"
 var pagetags = "Error"
 var pagesubject = "Error"
+var pagetitle = "Error"
 
 pagetype = page_type.split('+').join(' ');
 pagetags = page_tags.split('+').join(', ');
 pagesubject = page_subject.split('+').join(' ');  
+pagetitle = page_title.split('+').join(' ');
 </script>
 <head>
 <meta charset="UTF-8">
-<title>Global Economics</title>
+  <title id="ipagetitle"></title> 
+
 <link rel="stylesheet" href="https://rickard.co/atmo/style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="https://rickard.co/atmo/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://rickard.co/atmo/favicon-32x32.png">
@@ -70,6 +76,7 @@ Sorry this page is only available to users.<br>Please login or Signup<div class=
 </div>
 
 <script>
+  document.getElementById("ipagetitle").innerHTML = pagetitle;
   document.getElementById("ipagesubject").innerHTML = pagesubject;
   document.getElementById("ipagetype").innerHTML = pagetype;
   document.getElementById("ipagetags").innerHTML = pagetags;
